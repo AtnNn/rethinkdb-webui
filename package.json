@@ -21,13 +21,15 @@
   "homepage": "https://github.com/rethinkdb/rethinkdb",
   "dependencies": {
     "browserify": "^13.1.0",
-    "handlebars": "^3.0.1",
-    "less": "^2.4.0",
-    "coffeeify": "^2.0.0",
     "browserify-handlebars": "^1.0.0",
-    "rethinkdb": "^2.3.0",
-    "moment": "^2.10.3",
+    "coffeeify": "^2.0.0",
+    "express": "^4.14.0",
+    "handlebars": "^3.0.1",
     "hbsfy": "^2.2.1",
+    "http-route-proxy": "^0.2.2",
+    "less": "^2.4.0",
+    "moment": "^2.10.3",
+    "rethinkdb": "^2.3.0",
     "virtual-dom": "^2.0.1"
   }
 }

@@ -8,6 +8,9 @@ The build dependencies are
 
 Build into `dist/` with `npm run build`
 
+Test the Web UI against a RethinkDB instance: `node bin/serve.js` or
+`node bin/serve.js remote.host:8080`
+
 ### Adding dependencies
 - Add the dependency to the `dependencies` object in `package.json`
 - Delete the file `npm-shrinkwrap.json`
