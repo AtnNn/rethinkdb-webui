@@ -2,9 +2,12 @@
   "name": "rethinkdb-webui",
   "version": "2.0.0",
   "description": "WebUI for RethinkDB.",
-  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir dist && npm run build-js && npm run build-css && npm run build-static",
+    "build-js": "browserify -t coffeeify -t browserify-handlebars src/coffee/app.coffee -o dist/cluster.js",
+    "build-css": "cd src/less && cat styles* | lessc - ../../dist/cluster.css",
+    "build-static": "cd public && cp -a * ../dist/"
   },
   "repository": {
     "type": "git",
