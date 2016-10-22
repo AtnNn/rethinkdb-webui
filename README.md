@@ -2,11 +2,11 @@
 
 ## Build
 
-The MAKE file for the web interface is in `/mk/webui.mk`.
-
 The build dependencies are
 - `node.js` and `npm` are needed at the system level
 - `npm install` will install dependencies listed in `npm-shrinkwrap.json`
+
+Build into `dist/` with `npm run build`
 
 ### Adding dependencies
 - Add the dependency to the `dependencies` object in `package.json`
@@ -15,21 +15,13 @@ The build dependencies are
 - `$ npm install` in this directory (admin)
 - `$ npm dedupe` this will flatten dependencies as much as possible
 - `$ npm shrinkwrap` this will generate a new `npm-shrinkwrap.json`
-- Bump the version in `mk/support/pkg/admin-deps.sh` (this ensures make will download new dependencies if necessary)
-- Check in the changes to `npm-shrinkwrap.json`, `package.json` and `admin-deps.sh`
 
 ## Organization
-- `favicon.ico`: The favicon...
-- `Makefile`: To build from `/admin`
-- `/static`:
+- `src/`:
     - `coffee`: all the CoffeeScript files
     - `handlebars`: all the Handlebars templates
     - `less`: all the Less files
-    - `images`: all the images
-    - `js`: all the pure JavaScript files (dependencies like `underscore` etc.)
-    - `fonts`: web fonts used by the interface
-- `/template`: the HTML files
-
+- `public/`: fonts, images and other static files
 
 ## CoffeeScript files
 
